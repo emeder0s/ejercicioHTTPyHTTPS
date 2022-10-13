@@ -1,0 +1,171 @@
+header{
+ display: none;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    background-color: #2b2d42;
+    width: 100%;
+    color: white;
+    nav-right: auto;
+    height: 25px;
+    text-align: right;
+    line-height: 27px;
+    font-size: 27px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    margin-right: 30px;
+}
+
+nav a:hover{
+    font-size: 37px;
+}
+
+body{ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Actor';
+    font-size: 16px;
+    color: #2b2d42;
+    text-align: justify;
+    display:flex;
+    flex-direction: column;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    font-size: 12px;
+    background-color: #2b2d42;
+    height: 19px;
+    line-height: 0px;
+    width: 100%;
+    color: white;
+}
+/*-------------INTRO---------*/
+.intro-divs{
+    width: 50%;
+    padding: 30px;
+}
+
+#text-intro{
+    display: flex;
+    flex-direction: end;
+}
+
+#text-intro h2{
+    font-size: 70px;
+    line-height: 102px;
+}
+
+#button-intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro{
+    display:flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    background-color: beige;
+}
+    
+#empezar{
+    background-color: rgb(43, 45, 66);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 5px 7px;
+    box-shadow: rgb(43 45 66) 5px 5px 20px;
+    cursor: pointer;
+    font-size: xxx-large;
+    width: 240px;
+    height: 100px;
+    transition: width 1s, height 2s, margin;
+}
+#empezar:hover{
+    width: 300px;
+}
+
+.hint{
+    transform: translateY(500px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+    display: none;
+}
+
+/*-------------CONTENT---------*/
+#content{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.show{
+    animation: fadein 3s;
+}
+
+
+#container-http{
+    width: 50%;
+    background-color: #ffa552;
+}
+
+#container-https{
+    background-color: #6593e0;
+    width: 50%;
+}
+
+ul {
+    list-style: none;
+    padding: 0px 50px;
+}
+
+ul li, ol li {
+    margin-bottom: 15px;
+}
+
+.text-container{
+    background-color: beige;
+    border-radius: 15px;
+    margin: 50px;
+    padding: 30px 10px;
+    box-shadow: 5px 5px 34px;
+    scroll-behavior: smooth;
+    border: 5px solid;
+}
+
+p,h2 {
+    padding: 0px 40px;
+}
+
+ol {
+    padding: 0px 70px;
+}
+
+img#resumen {
+    height: 450px;
+}
+
+#img-resumen{
+    background-image: url("images/resumen.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;	
+    height: 700px;
+}
+
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP y HTTPS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <h1>HTTP y HTTPS</h1>
+    </header>
+    <nav>
+        <a href="index.html">home</a>
+    </nav>
+    <div id="intro">
+        <div id="text-intro" class="intro-divs">
+            <h2>¿Estás preparado para conocer los protocolos HTTP y HTTPS?</h2>
+        </div>
+        <div id="button-intro" class="intro-divs">
+            <button id="empezar" onclick="empezar()">Empezar</button>
+        </div>
+    </div>
+    <div id="content" style="display: none;">
+        <div id="container-http">
+            <img src="images/http.png">
+            <div class="text-container">
+                <ul>
+                    <li><strong>Nombre completo:</strong> Hypertext Transfer Protocol.</li>
+                    <li><strong>Objectivo:</strong> definir y estandarizar la sintaxis y semántica de los intercanbios de información en Internet.</li>
+                    <li><strong>HTTP</strong> se basa en sencillas operaciones de solicitud/respuesta. Cada operación <strong>HTTP</strong> implica una conexión con el servidor y se puede recoger un único objeto.</li>
+                    <li>Existen tres verbos básicos que un cliente puede utilizar para dialogar con el servidor: <strong>GET</strong>, para recoger un objeto, <strong>POST</strong>, para enviar información al servidor y <strong>HEAD</strong>, para solicitar las características de un objeto.</li>
+                </ul>
+            </div>
+            <div class="text-container">
+                <h2>Etapas de una transacción HTTP</h2>
+                <p>Cada vez que un cliente realiza una petición a un servidor, se ejecutan los siguientes pasos:</p>
+                <ol>
+                    <li>Un usuario accede a una URL, seleccionando un enlace de un documento HTML o introduciéndola directamente en el campo Location del cliente Web.
+                    <li>El cliente Web descodifica la URL, separando sus diferentes partes. Así identifica el protocolo de acceso, la dirección DNS o IP del servidor, el posible puerto opcional (el valor por defecto es 80) y el objeto requerido del servidor.</li>
+                    <li>Se abre una conexión TCP/IP con el servidor, llamando al puerto TCP correspondiente.</li>
+                    <li>Se realiza la petición. Para ello, se envía el comando necesario (GET, POST, HEAD,…), la dirección del objeto requerido (el contenido de la URL que sigue a la dirección del servidor), la versión del protocolo HTTP empleada (casi siempre HTTP/1.0) y un conjunto variable de información, que incluye datos sobre las capacidades del browser, datos opcionales para el servidor,…</li>
+                    <li>El servidor devuelve la respuesta al cliente. Consiste en un código de estado y el tipo de dato MIME de la información de retorno, seguido de la propia información.</li>
+                    <li>Se cierra la conexión TCP.</li>
+                </ol>
+            </div>
+        <div class="text-container">
+                <p>Aunque sea un protocolo demasiado vulnerable, quizá hace 15 años no suponía un gran riesgo a la hora de navegar por Internet. Sin embargo, en la actualidad solo determinados sitios web continúan facilitando el intercambio de información de este protocolo.</p>
+                <p>En la actualidad, empleamos las páginas web para comprar online, pedir cita en el médico o realizar gestiones bancarias. Algo que no era común que hiciésemos desde nuestro portátil o smartphone hace no demasiados años. Las cosas han cambiado.</p>
+                <p>Ha surgido entonces la necesidad de proteger la información que se transfiere entre el navegador del usuario y los servidores web. Es decir, era necesario un protocolo más seguro que cifre las conexiones de manera que ningún usuario malintencionado pueda interceptarla o robarla. De este modo surgió <strong>HTTPS.</strong></p>
+        </div> 
+        </div>
+        <div id="container-https">
+            <img src="images/https.png">
+            <div class="text-container">
+                <p>Es la versión segura de el http (Hyper Text Transfer Protocol).</p>
+                <p>HTTPS utiliza una combinación de dos protocolos de comunicación (HTTP+SSL/TLS).</p>
+                <p>Permite establecer una conexión <strong>segura</strong> entre el servidor y el cliente, que no puede ser interceptada por personas no autorizadas, al <strong>encriptar</strong> los datos para asegurar una transmisión de datos segura. Para ello es necesario que tu web tenga instalado un Certificado SSL.</p>
+            </div>
+            <div class="text-container">
+                <h2>Certificado SSL</h2>
+                <p>El certificado SSL actúa como un pasaporte digital, proporcionando una identificación a la web y adicionalmente protege la comunicación con los navegadores mediante una conexión cifrada usando el protocolo SSL(Secure Socket Layer).</p>
+                <p>Sin un certificado no se podría establecer una conexión segura entre el servidor y el usuario, pudiendo quedar expuestos a terceros datos sensibles como usuarios y contraseñas.</p>
+                <p>¿Cómo funciona?</p>
+                <ol>
+                    <li>Un usuario, mediante su navegador se conecta al sitio web.</li>
+                    <li>El navegador solicita al servidor web una identificación.</li>
+                    <li>El servidor web envía al navegador una copia de su certificado SSL.</li>
+                    <li> El navegador comprueba si el certificado SSL es confiable. Si el certificado es correcto se envía un mensaje al servidor web.</li>
+                    <li> El servidor web devuelve un acuse de recibo firmado digitalmente y se inicia una conexión cifrada con SSL.</li>
+                </ol>
+            </div>
+            <div id="img-resumen"class="text-container">
+                <!-- <img id="resumen" src="images/resumen.png"> -->
+            </div>
+        </div>
+    </div>
+    <footer>
+            <p>Copyright &#169 2022 - By Elena Mederos</p> 
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
